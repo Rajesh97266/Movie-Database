@@ -1,15 +1,25 @@
-import { Route, Routes } from "react-router-dom"
-import { MovieList } from "../pages"
-
+import { Route, Routes } from "react-router-dom";
+import { MovieList } from "../pages";
 
 const AllRoutes = () => {
   return (
-   <>
-   <Routes>
-    <Route path="/" element={<MovieList/>} />
-   </Routes>
-   </>
-  )
-}
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={<MovieList title="Your Guide to Popular Movies" />}
+        />
+        <Route
+          path="movies/popular"
+          element={<MovieList title="Popular Movies" />}
+        />
+        <Route path="movies/top" element={<MovieList title="Top Rated" />} />
+        <Route
+          path="movies/upcoming" 
+          element={<MovieList title="Upcoming Movies" />}   />
+      </Routes>
+    </>
+  );
+};
 
-export default AllRoutes
+export default AllRoutes;
