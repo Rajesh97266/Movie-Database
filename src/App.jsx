@@ -1,9 +1,15 @@
 import "./App.css";
+import { Footer, Header } from "./components";
+import AllRoutes from "./routes/AllRoutes";
 
 function App() {
   return (
     <>
-      <div className="container text-primary">App</div>
+      <div>
+        <Header/>
+        <AllRoutes/>
+        <Footer/>
+      </div>
     </>
   );
 }
