@@ -1,10 +1,12 @@
+import { NavLink } from "react-router-dom";
+
 export const Header = () => {
   return (
     <nav className="navbar navbar-expand-md fixed-top bg-primary navbar-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <NavLink className="navbar-brand" to="/">
           <i className="bi bi-film me-2"></i>MovieHunt
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -16,24 +18,24 @@ export const Header = () => {
         <div className="collapse navbar-collapse" id="menu">
           <ul className="navbar-nav me-auto mb-2 mb-md-0">
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <NavLink className="nav-link" to="/">
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/movies/top">
+              <NavLink className="nav-link" to="/movies/top">
                 Top Rated
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/movies/popular">
+              <NavLink className="nav-link" to="/movies/popular">
                 Popular
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/movies/upcoming">
+              <NavLink className="nav-link" to="/movies/upcoming">
                 Upcoming
-              </a>
+              </NavLink>
             </li>
           </ul>
           <form>
